@@ -32,7 +32,9 @@ npm start
 ## Run examples
 
 ```sh
-cd examples && yarn && yarn start
+npm run examples
+# or yarn
+yarn run examples
 ```
 
 ## Todo

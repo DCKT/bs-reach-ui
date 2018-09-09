@@ -1,31 +1,39 @@
-[%bs.raw {|require('./App.css')|}];
-
 [%bs.raw {|require('@reach/menu-button/styles.css')|}];
 
 [%bs.raw {|require('@reach/dialog/styles.css')|}];
 
 [@bs.module] external logo : string = "./logo.svg";
 
-let component = ReasonReact.statelessComponent("App");
+type state = {dialogIsOpen: bool};
 
-let make = (~message, _children) => {
+type action =
+  | ToggleDialog;
+
+let component = ReasonReact.reducerComponent("App");
+
+let make = _children => {
   ...component,
-  render: _self =>
+  initialState: () => {dialogIsOpen: false},
+  reducer: (action, state) =>
+    switch (action) {
+    | ToggleDialog => ReasonReact.Update({dialogIsOpen: ! state.dialogIsOpen})
+    },
+  render: self =>
     <div className="App">
       <div className="App-header">
         <img src=logo className="App-logo" alt="logo" />
-        <h2> (ReasonReact.string(message)) </h2>
+        <h2> ("bs-reach-ui" |> ReasonReact.string) </h2>
       </div>
-      <p className="App-intro">
+      <div>
+        <h2> ("VisuallyHidden" |> ReasonReact.string) </h2>
         <button>
           <img src="http://placehold.it/20x20" alt="save" />
           <VisuallyHidden> ("test" |> ReasonReact.string) </VisuallyHidden>
         </button>
-        (ReasonReact.string("To get started, edit"))
-        <code> (ReasonReact.string(" src/App.re ")) </code>
-        (ReasonReact.string("and save to reload."))
-      </p>
+      </div>
+      <hr />
       <div>
+        <h2> ("MenuButton" |> ReasonReact.string) </h2>
         <MenuButton.Menu>
           <MenuButton.MenuButton>
             ("Products" |> ReasonReact.string)
@@ -44,9 +52,18 @@ let make = (~message, _children) => {
             </MenuButton.MenuLink>
           </MenuButton.MenuList>
         </MenuButton.Menu>
-        <Dialog.Dialog isOpen=true>
-          <p> ("hello" |> ReasonReact.string) </p>
-        </Dialog.Dialog>
+        <hr />
+        <div>
+          <h2> ("Dialog" |> ReasonReact.string) </h2>
+          <button onClick=(_event => self.send(ToggleDialog))>
+            ("Toggle dialog" |> ReasonReact.string)
+          </button>
+          <Dialog.Dialog
+            isOpen=self.state.dialogIsOpen
+            onDismiss=(() => self.send(ToggleDialog))>
+            <p> ("hello" |> ReasonReact.string) </p>
+          </Dialog.Dialog>
+        </div>
       </div>
     </div>,
 };
