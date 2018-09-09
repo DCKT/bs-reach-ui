@@ -91,6 +91,13 @@ let make = _children => {
                )
           </WindowSize>
         </div>
+        <div>
+          <h2> ("Alert" |> ReasonReact.string) </h2>
+          <Alert type_=`polite> ("Polite alert" |> ReasonReact.string) </Alert>
+          <Alert type_=`assertive>
+            ("Assertive alert" |> ReasonReact.string)
+          </Alert>
+        </div>
       </div>
     </div>,
 };

@@ -13,6 +13,17 @@
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
 
+"@reach/alert@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@reach/alert/-/alert-0.1.1.tgz#92ed756a64407ae5f3f89815bcc8a96931b2dc4f"
+  dependencies:
+    "@reach/component-component" "^0.1.1"
+    "@reach/visually-hidden" "^0.1.1"
+
+"@reach/component-component@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.1.1.tgz#62ea2ec290da32f5e3a9872fb51f9a3ae4370cc4"
+
 "@reach/visually-hidden@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.1.1.tgz#5ad8cbf0758ac5bf3bd42dfcaa045d7ffd475d6e"

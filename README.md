@@ -42,7 +42,7 @@ yarn run examples
 * [x] VisuallyHidden (https://ui.reach.tech/visually-hidden)
 * [x] MenuButton (https://ui.reach.tech/menu-button)
 * [x] Dialog (https://ui.reach.tech/dialog)
-* [ ] Alert
+* [x] Alert (https://ui.reach.tech/alert)
 * [ ] AlertDialog
 * [x] SkipNav (https://ui.reach.tech/skip-nav)
 * [x] WindowSize (https://ui.reach.tech/window-size)
