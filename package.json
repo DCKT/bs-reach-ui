@@ -5,14 +5,16 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack -w",
-    "webpack:production": "NODE_ENV=production webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "BuckleScript"
+    "BuckleScript",
+    "Reason",
+    "ReasonReact",
+    "Reach",
+    "Accessibility"
   ],
-  "author": "",
+  "author": "Thomas Deconinck",
   "license": "MIT",
   "dependencies": {
     "@reach/visually-hidden": "^0.1.1",
