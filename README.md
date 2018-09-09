@@ -44,8 +44,8 @@ yarn run examples
 * [x] Dialog (https://ui.reach.tech/dialog)
 * [ ] Alert
 * [ ] AlertDialog
-* [ ] SkipNav
-* [ ] WindowSize
+* [x] SkipNav (https://ui.reach.tech/skip-nav)
+* [x] WindowSize (https://ui.reach.tech/window-size)
 * [ ] Rect
 
 * [ ] Implement correct callback type for `on[Event]`

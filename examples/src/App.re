@@ -64,6 +64,33 @@ let make = _children => {
             <p> ("hello" |> ReasonReact.string) </p>
           </Dialog.Dialog>
         </div>
+        <hr />
+        <div>
+          <h2> ("WindowSize" |> ReasonReact.string) </h2>
+          <WindowSize>
+            ...(
+                 windowSize =>
+                   <div>
+                     <p>
+                       ("width : " |> ReasonReact.string)
+                       (
+                         WindowSize.widthGet(windowSize)
+                         |> string_of_int
+                         |> ReasonReact.string
+                       )
+                     </p>
+                     <p>
+                       ("height : " |> ReasonReact.string)
+                       (
+                         WindowSize.heightGet(windowSize)
+                         |> string_of_int
+                         |> ReasonReact.string
+                       )
+                     </p>
+                   </div>
+               )
+          </WindowSize>
+        </div>
       </div>
     </div>,
 };

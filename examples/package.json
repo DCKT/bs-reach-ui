@@ -5,7 +5,9 @@
   "dependencies": {
     "@reach/dialog": "^0.1.2",
     "@reach/menu-button": "^0.1.7",
+    "@reach/skip-nav": "^0.1.1",
     "@reach/visually-hidden": "^0.1.1",
+    "@reach/window-size": "^0.1.1",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "reason-scripts": "0.9.0"
